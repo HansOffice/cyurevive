@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    "WFW",
+    "S S"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "F": "minecraft:feather",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "cyurevive:parrot_bed",
+    "count": 1
+  }
+}

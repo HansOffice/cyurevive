@@ -1,0 +1,49 @@
+name: 手动构建
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-1-21-1:
+    name: 构建 1.21.1 (Java 21)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: 配置 Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: 构建 Fabric 与 NeoForge
+        run: |
+          cd cyurevive-1.21.1
+          chmod +x gradlew
+          ./gradlew :fabric:build :neoforge:build
+
+  build-26-2:
+    name: 构建 26.2 (Java 25)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 JDK 25
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+
+      - name: 配置 Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: 构建 Fabric 与 NeoForge
+        run: |
+          cd cyurevive-26.2
+          chmod +x gradlew
+          ./gradlew :fabric:build :neoforge:build

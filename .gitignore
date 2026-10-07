@@ -1,0 +1,47 @@
+# Internal & Agent files
+AGENTS.md
+tools/
+
+# Release scripts & offline user docs
+发行/
+用户文档/
+*/发行/
+*/用户文档/
+
+# Gradle & Kotlin
+.gradle/
+.kotlin/
+build/
+out/
+*/build/
+*/*/build/
+*/.gradle/
+*/*/.gradle/
+*/.kotlin/
+*/*/.kotlin/
+
+# Minecraft run & logs
+run/
+run-data/
+logs/
+crash-reports/
+*.log
+
+# Binaries & archives
+*.jar
+*.zip
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# IDE & editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db

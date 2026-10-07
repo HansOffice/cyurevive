@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    "WCW",
+    "PPP"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "C": "minecraft:cod",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "cyurevive:cat_bed",
+    "count": 1
+  }
+}

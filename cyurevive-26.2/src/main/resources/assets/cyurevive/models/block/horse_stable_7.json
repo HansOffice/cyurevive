@@ -1,0 +1,64 @@
+{
+  "textures": {
+    "particle": "minecraft:block/spruce_planks",
+    "wood": "minecraft:block/spruce_planks",
+    "end": "minecraft:block/stripped_spruce_log_top",
+    "post": "minecraft:block/stripped_spruce_log",
+    "trim": "minecraft:block/dark_oak_planks",
+    "hay": "minecraft:block/hay_block_top",
+    "rope": "cyurevive:block/perch_wrap",
+    "dog": "cyurevive:block/cushion_dog",
+    "cat": "cyurevive:block/cushion_cat",
+    "water": "minecraft:block/blue_terracotta",
+    "metal": "minecraft:block/iron_block"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        0,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        2,
+        0
+      ],
+      "to": [
+        16,
+        2,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#wood",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    }
+  ]
+}

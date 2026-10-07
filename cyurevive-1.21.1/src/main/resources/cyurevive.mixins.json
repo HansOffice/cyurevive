@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "org.cyu.cyurevive.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PetDeathMixin",
+    "ServerSleepMixin",
+    "PetProtectionMixin",
+    "PetHomeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

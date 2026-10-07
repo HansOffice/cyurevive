@@ -1,0 +1,22 @@
+# Set default behavior
+* text=auto eol=lf
+
+# Explicitly declare text files
+*.java text diff=java
+*.json text
+*.toml text
+*.yml text
+*.yaml text
+*.md text
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Wrapper scripts
+gradlew text eol=lf
+gradlew.bat text eol=crlf
+
+# Binary files
+*.png binary
+*.jar binary
+*.zip binary

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    "WBW",
+    "PPP"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "B": "minecraft:bone",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "cyurevive:dog_bed",
+    "count": 1
+  }
+}

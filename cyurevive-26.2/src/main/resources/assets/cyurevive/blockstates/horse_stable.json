@@ -1,0 +1,644 @@
+{
+  "variants": {
+    "facing=north,part=0": {
+      "model": "cyurevive:block/horse_stable_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=0": {
+      "model": "cyurevive:block/horse_stable_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=0": {
+      "model": "cyurevive:block/horse_stable_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=0": {
+      "model": "cyurevive:block/horse_stable_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=1": {
+      "model": "cyurevive:block/horse_stable_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=1": {
+      "model": "cyurevive:block/horse_stable_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=1": {
+      "model": "cyurevive:block/horse_stable_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=1": {
+      "model": "cyurevive:block/horse_stable_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=2": {
+      "model": "cyurevive:block/horse_stable_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=2": {
+      "model": "cyurevive:block/horse_stable_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=2": {
+      "model": "cyurevive:block/horse_stable_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=2": {
+      "model": "cyurevive:block/horse_stable_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=3": {
+      "model": "cyurevive:block/horse_stable_3",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=3": {
+      "model": "cyurevive:block/horse_stable_3",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=3": {
+      "model": "cyurevive:block/horse_stable_3",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=3": {
+      "model": "cyurevive:block/horse_stable_3",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=4": {
+      "model": "cyurevive:block/horse_stable_4",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=4": {
+      "model": "cyurevive:block/horse_stable_4",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=4": {
+      "model": "cyurevive:block/horse_stable_4",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=4": {
+      "model": "cyurevive:block/horse_stable_4",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=5": {
+      "model": "cyurevive:block/horse_stable_5",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=5": {
+      "model": "cyurevive:block/horse_stable_5",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=5": {
+      "model": "cyurevive:block/horse_stable_5",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=5": {
+      "model": "cyurevive:block/horse_stable_5",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=6": {
+      "model": "cyurevive:block/horse_stable_6",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=6": {
+      "model": "cyurevive:block/horse_stable_6",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=6": {
+      "model": "cyurevive:block/horse_stable_6",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=6": {
+      "model": "cyurevive:block/horse_stable_6",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=7": {
+      "model": "cyurevive:block/horse_stable_7",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=7": {
+      "model": "cyurevive:block/horse_stable_7",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=7": {
+      "model": "cyurevive:block/horse_stable_7",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=7": {
+      "model": "cyurevive:block/horse_stable_7",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=8": {
+      "model": "cyurevive:block/horse_stable_8",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=8": {
+      "model": "cyurevive:block/horse_stable_8",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=8": {
+      "model": "cyurevive:block/horse_stable_8",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=8": {
+      "model": "cyurevive:block/horse_stable_8",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=9": {
+      "model": "cyurevive:block/horse_stable_9",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=9": {
+      "model": "cyurevive:block/horse_stable_9",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=9": {
+      "model": "cyurevive:block/horse_stable_9",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=9": {
+      "model": "cyurevive:block/horse_stable_9",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=10": {
+      "model": "cyurevive:block/horse_stable_10",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=10": {
+      "model": "cyurevive:block/horse_stable_10",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=10": {
+      "model": "cyurevive:block/horse_stable_10",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=10": {
+      "model": "cyurevive:block/horse_stable_10",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=11": {
+      "model": "cyurevive:block/horse_stable_11",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=11": {
+      "model": "cyurevive:block/horse_stable_11",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=11": {
+      "model": "cyurevive:block/horse_stable_11",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=11": {
+      "model": "cyurevive:block/horse_stable_11",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=12": {
+      "model": "cyurevive:block/horse_stable_12",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=12": {
+      "model": "cyurevive:block/horse_stable_12",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=12": {
+      "model": "cyurevive:block/horse_stable_12",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=12": {
+      "model": "cyurevive:block/horse_stable_12",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=13": {
+      "model": "cyurevive:block/horse_stable_13",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=13": {
+      "model": "cyurevive:block/horse_stable_13",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=13": {
+      "model": "cyurevive:block/horse_stable_13",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=13": {
+      "model": "cyurevive:block/horse_stable_13",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=14": {
+      "model": "cyurevive:block/horse_stable_14",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=14": {
+      "model": "cyurevive:block/horse_stable_14",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=14": {
+      "model": "cyurevive:block/horse_stable_14",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=14": {
+      "model": "cyurevive:block/horse_stable_14",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=15": {
+      "model": "cyurevive:block/horse_stable_15",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=15": {
+      "model": "cyurevive:block/horse_stable_15",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=15": {
+      "model": "cyurevive:block/horse_stable_15",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=15": {
+      "model": "cyurevive:block/horse_stable_15",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=16": {
+      "model": "cyurevive:block/horse_stable_16",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=16": {
+      "model": "cyurevive:block/horse_stable_16",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=16": {
+      "model": "cyurevive:block/horse_stable_16",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=16": {
+      "model": "cyurevive:block/horse_stable_16",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=17": {
+      "model": "cyurevive:block/horse_stable_17",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=17": {
+      "model": "cyurevive:block/horse_stable_17",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=17": {
+      "model": "cyurevive:block/horse_stable_17",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=17": {
+      "model": "cyurevive:block/horse_stable_17",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=18": {
+      "model": "cyurevive:block/horse_stable_18",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=18": {
+      "model": "cyurevive:block/horse_stable_18",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=18": {
+      "model": "cyurevive:block/horse_stable_18",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=18": {
+      "model": "cyurevive:block/horse_stable_18",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=19": {
+      "model": "cyurevive:block/horse_stable_19",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=19": {
+      "model": "cyurevive:block/horse_stable_19",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=19": {
+      "model": "cyurevive:block/horse_stable_19",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=19": {
+      "model": "cyurevive:block/horse_stable_19",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=20": {
+      "model": "cyurevive:block/horse_stable_20",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=20": {
+      "model": "cyurevive:block/horse_stable_20",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=20": {
+      "model": "cyurevive:block/horse_stable_20",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=20": {
+      "model": "cyurevive:block/horse_stable_20",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=21": {
+      "model": "cyurevive:block/horse_stable_21",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=21": {
+      "model": "cyurevive:block/horse_stable_21",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=21": {
+      "model": "cyurevive:block/horse_stable_21",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=21": {
+      "model": "cyurevive:block/horse_stable_21",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=22": {
+      "model": "cyurevive:block/horse_stable_22",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=22": {
+      "model": "cyurevive:block/horse_stable_22",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=22": {
+      "model": "cyurevive:block/horse_stable_22",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=22": {
+      "model": "cyurevive:block/horse_stable_22",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=23": {
+      "model": "cyurevive:block/horse_stable_23",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=23": {
+      "model": "cyurevive:block/horse_stable_23",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=23": {
+      "model": "cyurevive:block/horse_stable_23",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=23": {
+      "model": "cyurevive:block/horse_stable_23",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=24": {
+      "model": "cyurevive:block/horse_stable_24",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=24": {
+      "model": "cyurevive:block/horse_stable_24",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=24": {
+      "model": "cyurevive:block/horse_stable_24",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=24": {
+      "model": "cyurevive:block/horse_stable_24",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=25": {
+      "model": "cyurevive:block/horse_stable_25",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=25": {
+      "model": "cyurevive:block/horse_stable_25",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=25": {
+      "model": "cyurevive:block/horse_stable_25",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=25": {
+      "model": "cyurevive:block/horse_stable_25",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=26": {
+      "model": "cyurevive:block/horse_stable_26",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=26": {
+      "model": "cyurevive:block/horse_stable_26",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=26": {
+      "model": "cyurevive:block/horse_stable_26",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=26": {
+      "model": "cyurevive:block/horse_stable_26",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=27": {
+      "model": "cyurevive:block/horse_stable_27",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=27": {
+      "model": "cyurevive:block/horse_stable_27",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=27": {
+      "model": "cyurevive:block/horse_stable_27",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=27": {
+      "model": "cyurevive:block/horse_stable_27",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=28": {
+      "model": "cyurevive:block/horse_stable_28",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=28": {
+      "model": "cyurevive:block/horse_stable_28",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=28": {
+      "model": "cyurevive:block/horse_stable_28",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=28": {
+      "model": "cyurevive:block/horse_stable_28",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=29": {
+      "model": "cyurevive:block/horse_stable_29",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=29": {
+      "model": "cyurevive:block/horse_stable_29",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=29": {
+      "model": "cyurevive:block/horse_stable_29",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=29": {
+      "model": "cyurevive:block/horse_stable_29",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=30": {
+      "model": "cyurevive:block/horse_stable_30",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=30": {
+      "model": "cyurevive:block/horse_stable_30",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=30": {
+      "model": "cyurevive:block/horse_stable_30",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=30": {
+      "model": "cyurevive:block/horse_stable_30",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,part=31": {
+      "model": "cyurevive:block/horse_stable_31",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,part=31": {
+      "model": "cyurevive:block/horse_stable_31",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,part=31": {
+      "model": "cyurevive:block/horse_stable_31",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,part=31": {
+      "model": "cyurevive:block/horse_stable_31",
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

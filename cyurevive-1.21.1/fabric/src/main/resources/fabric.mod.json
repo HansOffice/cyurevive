@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "cyurevive",
+  "version": "${version}",
+  "name": "CyuRevive · 宠物复活",
+  "icon": "assets/cyurevive/icon.png",
+  "description": "让宠物像玩家一样拥有出生点：认窝安家、倒地救援、睡醒回窝",
+  "authors": [
+    "HansOffice"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.cyu.cyurevive.fabric.CyuReviveFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": ">=0.116.7+1.21.1"
+  },
+  "mixins": [
+    "cyurevive.mixins.json"
+  ]
+}

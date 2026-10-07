@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "L L",
+    "FHF"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:spruce_planks"
+    },
+    "L": {
+      "item": "minecraft:stripped_spruce_log"
+    },
+    "F": {
+      "item": "minecraft:spruce_fence"
+    },
+    "H": {
+      "item": "minecraft:hay_block"
+    }
+  },
+  "result": {
+    "id": "cyurevive:horse_stable",
+    "count": 1
+  }
+}

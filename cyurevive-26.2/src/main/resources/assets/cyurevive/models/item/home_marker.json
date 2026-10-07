@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cyurevive:item/home_marker"
+  },
+  "gui_light": "front"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "SBS",
+    " P "
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:string",
+    "B": "minecraft:bone"
+  },
+  "result": {
+    "id": "cyurevive:home_marker",
+    "count": 1
+  }
+}
