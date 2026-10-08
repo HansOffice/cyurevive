@@ -36,12 +36,17 @@ Fabric 端需安装对应版本的 Fabric API；Forge 与 NeoForge 端无需任�
 
 | 指令 | 效果 | 权限 |
 | --- | --- | --- |
-| `/cyurevive help` | 查看帮助菜单，点击条目可自动回填 | 全体玩家 |
+| `/cyurevive help` | 查看常用操作，点击条目可自动回填 | 全体玩家 |
+| `/cyurevive help admin` | 查看单人、多人对应的管理帮助 | 管理员 |
 | `/cyurevive list` | 查看自己的宠物列表、状态与家的位置 | 全体玩家 |
 | `/cyurevive home <名称>` | 面朝自己放置的设施，为住所命名 | 全体玩家 |
 | `/cyurevive unbind <序号>` | 解除指定宠物的安家绑定 | 全体玩家 |
 | `/cyurevive recall` | 远程召回自己的待回家宠物 | 全体玩家 |
+| `/cyurevive revive [玩家]` | 安排自己或指定玩家的待回家宠物复活 | 管理员 |
+| `/cyurevive purge [玩家]` | 清空自己或指定玩家的待复活宠物，不可恢复 | 管理员 |
 | `/cyurevive reload` | 热重载配置文件 | 管理员 |
+
+`revive` 与 `purge` 省略玩家时操作自己，控制台必须指定玩家；多人目标只允许一名玩家。管理权限沿用原版规则，不会因单人模式自动开放；开放局域网后按多人场景展示帮助
 
 ## 配置
 

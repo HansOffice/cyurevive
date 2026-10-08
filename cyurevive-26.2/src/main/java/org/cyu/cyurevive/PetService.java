@@ -54,19 +54,19 @@ public final class PetService {
     }
 
     private static Component info(String key, Object... args) {
-        return Component.translatable(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_DIM));
+        return PetMessages.text(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_DIM));
     }
 
     private static Component ok(String key, Object... args) {
-        return Component.translatable(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_SUCCESS));
+        return PetMessages.text(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_SUCCESS));
     }
 
     private static Component err(String key, Object... args) {
-        return Component.translatable(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_ERROR));
+        return PetMessages.text(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_ERROR));
     }
 
     private static Component alert(String key, Object... args) {
-        return Component.translatable(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_AMBER));
+        return PetMessages.text(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_AMBER));
     }
 
     private static Component name(Object target) {
@@ -88,7 +88,7 @@ public final class PetService {
 
     private static Component header(String key, Object... args) {
         return Component.literal("--- ").withStyle(style -> style.withColor(CyuRevive.TEXT_MUTED))
-            .append(Component.translatable(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_BRIGHT)))
+            .append(PetMessages.text(key, args).withStyle(style -> style.withColor(CyuRevive.TEXT_BRIGHT)))
             .append(Component.literal(" ---").withStyle(style -> style.withColor(CyuRevive.TEXT_MUTED)));
     }
 

@@ -66,20 +66,25 @@ NeoForge 端不需要任何附属模组；Fabric 端需自行安装 Fabric API
 
 | 指令 | 效果 | 权限 |
 | --- | --- | --- |
-| `/cyurevive` 或 `/cyurevive help` | 查看帮助，条目可点击回填 | 全体玩家 |
+| `/cyurevive` 或 `/cyurevive help` | 查看常用操作，条目可点击回填 | 全体玩家 |
+| `/cyurevive help admin` | 查看当前场景的管理帮助 | 管理员 |
 | `/cyurevive home <名称>` | 看着自己放置的设施，指定家的名称，最多 32 个字符 | 全体玩家 |
 | `/cyurevive list` | 查看自己的宠物、家位置与状态（带编号） | 全体玩家 |
 | `/cyurevive unbind <序号>` | 移除自己某只宠物的家，按 list 编号 | 全体玩家 |
 | `/cyurevive recall` | 把待回家的宠物远程召回到身边 | 全体玩家 |
 | `/cyurevive list <玩家>` | 查看指定玩家的宠物 | OP（权限等级 2） |
 | `/cyurevive unbind <玩家> <序号>` | 移除指定玩家某只宠物的家 | OP（权限等级 2） |
-| `/cyurevive revive <玩家>` | 安排指定在线玩家的待回家宠物复活 | OP（权限等级 2） |
+| `/cyurevive revive [玩家]` | 安排自己或指定在线玩家的待回家宠物复活 | OP（权限等级 2） |
 | `/cyurevive forbid <玩家>` | 收回指定玩家的宠物复活资格 | OP（权限等级 2） |
 | `/cyurevive unforbid <玩家>` | 恢复指定玩家的宠物复活资格 | OP（权限等级 2） |
-| `/cyurevive purge <玩家>` | 清空指定玩家的待复活宠物 | OP（权限等级 2） |
-| `/cyurevive status` | 查看全服宠物数据概况 | OP（权限等级 2） |
+| `/cyurevive purge [玩家]` | 清空自己或指定玩家的待复活宠物，不可恢复 | OP（权限等级 2） |
+| `/cyurevive status` | 查看宠物数据概况 | OP（权限等级 2） |
 | `/cyurevive doctor [fix]` | 体检宠物数据，加 fix 自动修复安全项 | OP（权限等级 2） |
 | `/cyurevive reload` | 热重载 `config/cyurevive.toml` | OP（权限等级 2） |
+
+常用帮助只显示自己的养宠操作，有管理权限时可用 `/cyurevive help admin` 查看管理帮助。单人管理帮助突出自己的宠物与世界维护，开放局域网后按多人场景展示；控制台直接显示指定玩家管理与维护指令
+
+管理权限沿用原版规则，单人模式不会自动开放管理操作。`revive` 与 `purge` 省略玩家时操作自己，控制台必须填写玩家；目标只允许一名玩家，不能用匹配多人的选择器批量操作。`purge` 清空记录，以及解绑待复活宠物，都会删除对应的等待记录，无法恢复
 
 远程召回由 `command-recall` 配置开关控制，消耗与窝边召回共用 `recall-item`
 
@@ -158,4 +163,4 @@ NeoForge 端不需要任何附属模组；Fabric 端需自行安装 Fabric API
 
 ## 协议
 
-本项目采用 [MIT](LICENSE) 协议开源
+本项目采用 [MIT](../LICENSE) 协议开源

@@ -8,8 +8,11 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.server.level.ServerPlayer;
 import org.cyu.cyurevive.CyuRevive;
+import org.cyu.cyurevive.PetMessages;
 
 import java.util.List;
+
+import static org.cyu.cyurevive.command.CommandSpec.*;
 
 public final class HelpRenderer {
     private static final int BORDER = CyuRevive.TEXT_BORDER;
@@ -23,62 +26,90 @@ public final class HelpRenderer {
         "cyurevive.help.usage.bind",
         "cyurevive.help.usage.recall",
         "cyurevive.help.usage.info");
+    private static final CommandSpec[] COMMANDS = CommandSpec.values();
+    private enum Page { PLAYER, ADMIN }
 
-    private record Entry(String command, String descKey, boolean admin) {
-    }
-
-    private static final List<Entry> ENTRIES = List.of(
-        new Entry("/cyurevive list", "cyurevive.help.list", false),
-        new Entry("/cyurevive home <名称>", "cyurevive.help.home", false),
-        new Entry("/cyurevive unbind <序号>", "cyurevive.help.unbind", false),
-        new Entry("/cyurevive recall", "cyurevive.help.recall", false),
-        new Entry("/cyurevive list <玩家>", "cyurevive.help.admin.list", true),
-        new Entry("/cyurevive unbind <玩家> <序号>", "cyurevive.help.admin.unbind", true),
-        new Entry("/cyurevive revive <玩家>", "cyurevive.help.admin.revive", true),
-        new Entry("/cyurevive forbid <玩家>", "cyurevive.help.admin.forbid", true),
-        new Entry("/cyurevive unforbid <玩家>", "cyurevive.help.admin.unforbid", true),
-        new Entry("/cyurevive purge <玩家>", "cyurevive.help.admin.purge", true),
-        new Entry("/cyurevive status", "cyurevive.help.status", true),
-        new Entry("/cyurevive doctor [fix]", "cyurevive.help.doctor", true),
-        new Entry("/cyurevive reload", "cyurevive.help.reload", true));
-
-    private HelpRenderer() {
-    }
+    private HelpRenderer() { }
 
     public static int send(CommandSourceStack source) {
-        boolean admin = source.hasPermission(PetCommands.OP_PERMISSION);
+        return render(source, source.getEntity() instanceof ServerPlayer ? Page.PLAYER : Page.ADMIN);
+    }
+
+    public static int sendAdmin(CommandSourceStack source) {
+        return render(source, Page.ADMIN);
+    }
+
+    private static int render(CommandSourceStack source, Page page) {
+        if (page == Page.ADMIN && !ADMIN_HELP.available(source)) {
+            source.sendFailure(PetMessages.text("cyurevive.command.no_permission").withStyle(style -> style.withColor(CyuRevive.TEXT_ERROR)));
+            return 0;
+        }
+        Environment environment = Environment.of(source);
         source.sendSystemMessage(border());
         source.sendSystemMessage(title());
-        source.sendSystemMessage(Component.translatable("cyurevive.help.usage-header").withStyle(textStyle -> textStyle.withColor(BRIGHT)));
-        for (String key : HINTS) {
-            source.sendSystemMessage(Component.literal("· ").withStyle(textStyle -> textStyle.withColor(MUTED))
-                .append(Component.translatable(key).withStyle(textStyle -> textStyle.withColor(DIM))));
-        }
-        for (Entry entry : ENTRIES) {
-            if (entry.admin() && !admin) continue;
-            MutableComponent line = Component.literal("› " + entry.command() + " ")
-                .withStyle(textStyle -> textStyle.withColor(BRIGHT))
-                .append(Component.translatable(entry.descKey()).withStyle(textStyle -> textStyle.withColor(DIM)));
-            if (source.getEntity() instanceof ServerPlayer) {
-                line.withStyle(style -> style
-                    .withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, entry.command()))
-                    .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
-                        Component.translatable("cyurevive.help.hover", entry.command()).withStyle(textStyle -> textStyle.withColor(DIM)))));
-            }
-            source.sendSystemMessage(line);
+        source.sendSystemMessage(PetMessages.text(page == Page.PLAYER ? "cyurevive.help.page.player" : "cyurevive.help.page.admin",
+            environment.caption()).withStyle(style -> style.withColor(BRIGHT)));
+        switch (page) {
+            case PLAYER -> playerPage(source, environment);
+            case ADMIN -> adminPage(source, environment);
         }
         source.sendSystemMessage(border());
         return 1;
     }
 
+    private static void playerPage(CommandSourceStack source, Environment environment) {
+        for (String key : HINTS) {
+            source.sendSystemMessage(Component.literal("· ").withStyle(style -> style.withColor(MUTED))
+                .append(PetMessages.text(key).withStyle(style -> style.withColor(DIM))));
+        }
+        entries(source, Section.PLAYER, environment);
+        if (!CyuRevive.config.commandRecall) {
+            source.sendSystemMessage(PetMessages.text("cyurevive.help.recall_disabled").withStyle(style -> style.withColor(DIM)));
+        }
+        if (ADMIN_HELP.available(source)) entry(source, ADMIN_HELP);
+    }
+
+    private static void adminPage(CommandSourceStack source, Environment environment) {
+        source.sendSystemMessage(PetMessages.text(environment == Environment.SINGLEPLAYER
+            ? "cyurevive.help.section.pets" : "cyurevive.help.section.players").withStyle(style -> style.withColor(BRIGHT)));
+        entries(source, Section.PETS, environment);
+        if (environment == Environment.MULTIPLAYER) {
+            source.sendSystemMessage(PetMessages.text("cyurevive.help.self_target_hint").withStyle(style -> style.withColor(DIM)));
+        }
+        source.sendSystemMessage(PetMessages.text(environment == Environment.SINGLEPLAYER
+            ? "cyurevive.help.section.world" : "cyurevive.help.section.server").withStyle(style -> style.withColor(BRIGHT)));
+        entries(source, Section.WORLD, environment);
+        if (source.getEntity() instanceof ServerPlayer) entry(source, HELP);
+    }
+
+    private static void entries(CommandSourceStack source, Section section, Environment environment) {
+        for (CommandSpec command : COMMANDS) {
+            if (command.shownIn(section, environment) && command.available(source)) entry(source, command);
+        }
+    }
+
+    private static void entry(CommandSourceStack source, CommandSpec command) {
+        MutableComponent line = Component.literal("› ").withStyle(style -> style.withColor(BRIGHT))
+            .append(command.usage(source).withStyle(style -> style.withColor(BRIGHT)))
+            .append(Component.literal(" "))
+            .append(command.description().withStyle(style -> style.withColor(DIM)));
+        if (source.getEntity() instanceof ServerPlayer) {
+            line.withStyle(style -> style
+                .withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, command.suggestion()))
+                .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
+                    PetMessages.text("cyurevive.help.hover", command.suggestion()).withStyle(hoverStyle -> hoverStyle.withColor(DIM)))));
+        }
+        source.sendSystemMessage(line);
+    }
+
     private static MutableComponent border() {
-        return Component.literal(RULE).withStyle(textStyle -> textStyle.withColor(BORDER).withStrikethrough(true));
+        return Component.literal(RULE).withStyle(style -> style.withColor(BORDER).withStrikethrough(true));
     }
 
     private static MutableComponent title() {
         return gradient("CyuRevive")
-            .append(Component.literal(" · ").withStyle(textStyle -> textStyle.withColor(DIM)))
-            .append(Component.translatable("cyurevive.help.brand").withStyle(textStyle -> textStyle.withColor(BRIGHT)));
+            .append(Component.literal(" · ").withStyle(style -> style.withColor(DIM)))
+            .append(PetMessages.text("cyurevive.help.brand").withStyle(style -> style.withColor(BRIGHT)));
     }
 
     private static MutableComponent gradient(String text) {
