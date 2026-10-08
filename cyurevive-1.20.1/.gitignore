@@ -1,0 +1,14 @@
+.gradle/
+.kotlin/
+build/
+run/
+run-data/
+logs/
+crash-reports/
+*.log
+.idea/
+发行/
+用户文档/
+*.jar
+*.zip
+!gradle/wrapper/gradle-wrapper.jar

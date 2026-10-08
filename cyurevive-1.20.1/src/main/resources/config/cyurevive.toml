@@ -1,0 +1,79 @@
+# 欢迎使用 CyuRevive
+# MineBBS: https://www.minebbs.com/
+# QQ群聊：331910315
+#
+# 手持认家牌右键自己的宠物选中它，再右键窝预览，再点一次确认认家
+# 潜行空手右键宠物窝：召回等待回家的宠物，或让活着的宠物回窝休息
+# 手持认家牌潜行右键空气：取消选择；普通喂食和骑乘沿用原版操作
+# 输入 /cyurevive 查看指令帮助；改完本文件可用 /cyurevive reload 热重载
+# 配置版本，跟随模组版本进位，请勿手动修改
+config-version = 100
+
+# 配置布局协议版本，结构调整时自增，请勿手动修改
+config-layout = 5
+
+# 认家距离，2～64 格，确认时选中的宠物需在主人身边
+bind-radius = 12
+
+# 每个设施的住户数量上限；宠物栏、马棚、猫窝、狗窝最多 1 只，鹦鹉栖架最多 2 只
+bed-capacity = 1
+
+# 每名玩家最多绑定多少只宠物，-1 为不限制
+max-pets-per-player = 8
+
+# 主人睡一觉后，所有等待回家的宠物全部回窝
+revive-on-sleep = true
+
+# 宠物离世后多少秒自动回窝，0 表示不自动回窝
+revive-cooldown-seconds = 180
+
+# 允许潜行空手右键窝立即召回等待中的宠物
+recall-enabled = true
+
+# 允许用 /cyurevive recall 远程召回待回家的宠物，召回会降落在主人身边
+command-recall = true
+
+# 手动召回消耗的物品，留空表示免费召回
+recall-item = ""
+
+# 手动召回消耗数量
+recall-item-count = 1
+
+# 宠物受致命伤时先倒地进入濒死倒计时，喂对物品救回，超时才真正离世
+downed-enabled = true
+
+# 濒死倒计时（秒）
+downed-seconds = 60
+
+# 可救回濒死宠物的物品列表
+downed-items = ["minecraft:bone"]
+
+# 濒死救回后的最大血量比例，大于 0 且不超过 1
+downed-heal-percent = 0.5
+
+# 复活后的血量比例，大于 0 且不超过 1
+respawn-health-percent = 1.0
+
+# 复活后抵挡普通伤害的游戏秒数，0 关闭；不阻止虚空伤害与 /kill
+respawn-protection-seconds = 5
+
+# 宠物死亡消息全服广播，false 时沿用原版仅主人可见
+broadcast-death-message = false
+
+# 窝私有化：true 时只有放置窝的人能让宠物入住，适合公共服防止别人占窝
+bed-private = false
+
+# 夜间回窝：主人不在宠物窝所在维度时，窝附近有家的宠物会自己走回窝休息
+night-return = true
+
+# 复活仪式：召回的宠物先凝聚灵光 2 秒再现身，false 时立即出现
+revive-ceremony = true
+
+# 窝上灵光：有待回家宠物的窝会散发淡淡灵魂粒子，一眼看出有宝贝在等
+bed-aura = true
+
+# 濒死救回后的生命恢复时长，0～60 秒
+rescue-regen-seconds = 5
+
+# 可认家的宠物实体 ID，必须已安装且具有主人，体型还需符合住位空间
+revivable-types = ["minecraft:wolf", "minecraft:cat", "minecraft:parrot", "minecraft:horse", "minecraft:donkey", "minecraft:mule", "minecraft:llama", "minecraft:trader_llama"]

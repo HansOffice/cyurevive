@@ -1,0 +1,89 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev.legacyforge' version "${moddev_version}"
+}
+
+base {
+    archivesName = "cyurevive-${minecraft_version}-forge"
+}
+
+legacyForge {
+    version = "${minecraft_version}-${forge_version}"
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java.srcDir '../src/main/java'
+        resources.srcDir '../src/main/resources'
+    }
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+def replaceProperties = [
+        minecraft_version      : minecraft_version,
+        minecraft_version_range: minecraft_version_range,
+        forge_version          : forge_version,
+        mod_id                 : mod_id,
+        mod_name               : mod_name,
+        mod_license            : mod_license,
+        mod_authors            : mod_authors,
+        mod_version            : project.version,
+]
+
+def generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from 'src/main/templates'
+    into 'build/generated/sources/modMetadata'
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+legacyForge.ideSyncTask generateModMetadata
+
+test { enabled = false }
+
+repositories { mavenCentral() }
+
+dependencies {
+    compileOnly "com.electronwill.night-config:toml:${night_config_version}"
+    compileOnly "com.electronwill.night-config:core:${night_config_version}"
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+mixin {
+    add sourceSets.main, 'cyurevive.refmap.json'
+    config 'cyurevive.mixins.json'
+}
+
+jar {
+    manifest.attributes('MixinConfigs': 'cyurevive.mixins.json')
+}

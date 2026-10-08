@@ -1,14 +1,15 @@
 # CyuRevive · 宠物复活
 
-原创 Minecraft 宠物复活模组，适用于 1.21.1 与 26.2，支持 Fabric 与 NeoForge。让宠物拥有专属住所与出生点，支持认家作息、濒死急救与灵魂归来
+原创 Minecraft 宠物复活模组，适用于 1.20.1、1.21.1 与 26.2，支持 Fabric，以及对应版本的 Forge 或 NeoForge。让宠物拥有专属住所与出生点，支持认家作息、濒死急救与灵魂归来
 
 ## 下载
 
 前往 [Releases](https://github.com/HansOffice/cyurevive/releases) 页面下载对应版本与加载器的构建：
+- **1.20.1**（Java 17）：`cyurevive-1.20.1-fabric-1.0.jar` / `cyurevive-1.20.1-forge-1.0.jar`
 - **1.21.1**（Java 21）：`cyurevive-1.21.1-fabric-1.0.jar` / `cyurevive-1.21.1-neoforge-1.0.jar`
 - **26.2**（Java 25）：`cyurevive-26.2-fabric-1.0.jar` / `cyurevive-26.2-neoforge-1.0.jar`
 
-Fabric 端需安装对应版本的 Fabric API；NeoForge 端无需任何前置模组
+Fabric 端需安装对应版本的 Fabric API；Forge 与 NeoForge 端无需任何前置模组
 
 ## 内容介绍
 
@@ -27,7 +28,7 @@ Fabric 端需安装对应版本的 Fabric API；NeoForge 端无需任何前置�
 | **鹦鹉栖架** (1×1) | 最多容纳两只鹦鹉，配双独立栖位 | 四块羊毛 + 一根羽毛 + 两根木棍 |
 
 ### 濒死救援与灵魂归来
-- **现场急救**：受到致命伤时宠物不会直接死亡，而是进入 60 秒濒死倒计时（倒地呜咽并冒烟）；靠近注视可在快捷栏上方查看剩余时间，主手或副手喂食专属食物即可拉起并获得短暂生命恢复
+- **现场急救**：受到致命伤时宠物不会直接死亡，而是停留原地进入 60 秒濒死倒计时，伴随求救声与烟雾；靠近注视可在快捷栏上方查看剩余时间，主手或副手喂食专属食物即可救回并获得短暂生命恢复
 - **待回家状态**：未能救回时才确认离世，宠物记录完好保留（名字、毛色、项圈、护甲与箱内物品不丢失），窝上升起炊烟与微光，进入待回家状态
 - **归来通道**：主人入睡、自动冷却到期（默认 3 分钟）、窝边潜行空手右键或使用 `/cyurevive recall` 均可唤回归来；复活后附带短时普通伤害保护
 
@@ -53,16 +54,17 @@ Fabric 端需安装对应版本的 Fabric API；NeoForge 端无需任何前置�
 ## 构建
 
 ```bash
+# 构建 1.20.1（Gradle 使用 Java 21，自动获取 Java 17 编译工具链）
+(cd cyurevive-1.20.1 && ./gradlew :fabric:build :forge:build)
+
 # 构建 1.21.1 (Java 21)
-cd cyurevive-1.21.1
-./gradlew :fabric:build :neoforge:build
+(cd cyurevive-1.21.1 && ./gradlew :fabric:build :neoforge:build)
 
 # 构建 26.2 (Java 25)
-cd cyurevive-26.2
-./gradlew :fabric:build :neoforge:build
+(cd cyurevive-26.2 && ./gradlew :fabric:build :neoforge:build)
 ```
 
-构建产物输出在各子工程的 `fabric/build/libs/` 与 `neoforge/build/libs/` 目录下
+构建产物输出在对应工程的 `fabric/build/libs/`、`forge/build/libs/` 或 `neoforge/build/libs/` 目录下
 
 ## 协议
 

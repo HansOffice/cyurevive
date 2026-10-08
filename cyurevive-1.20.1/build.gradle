@@ -1,0 +1,10 @@
+subprojects {
+    group = 'org.cyu'
+    version = rootProject.version
+
+    tasks.withType(Jar).configureEach {
+        from(rootProject.file('../LICENSE')) {
+            into 'META-INF'
+        }
+    }
+}

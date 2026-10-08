@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="${mod_license}"
+logoFile="assets/cyurevive/icon.png"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="CyuRevive · 宠物复活"
+authors="${mod_authors}"
+description='''
+让宠物像玩家一样拥有出生点：认窝安家、倒地救援、睡醒回窝
+'''
+
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="[${forge_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"

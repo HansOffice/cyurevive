@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "org.cyu.cyurevive.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "cyurevive.refmap.json",
+  "mixins": [
+    "PetDeathMixin",
+    "ServerSleepMixin",
+    "PetProtectionMixin",
+    "PetHomeMixin",
+    "PetHorseInventoryAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

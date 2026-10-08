@@ -4,6 +4,28 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-1-20-1:
+    name: 构建 1.20.1 (Fabric / Forge)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Gradle 所需的 JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: 配置 Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: 构建 Fabric 与 Forge
+        run: |
+          cd cyurevive-1.20.1
+          chmod +x gradlew
+          ./gradlew :fabric:build :forge:build
+
   build-1-21-1:
     name: 构建 1.21.1 (Java 21)
     runs-on: ubuntu-latest

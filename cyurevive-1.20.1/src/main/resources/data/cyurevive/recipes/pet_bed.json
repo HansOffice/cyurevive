@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "F F",
+    "FHF",
+    "PPP"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:spruce_fence"
+    },
+    "H": {
+      "item": "minecraft:hay_block"
+    },
+    "P": {
+      "item": "minecraft:spruce_planks"
+    }
+  },
+  "result": {
+    "item": "cyurevive:pet_bed",
+    "count": 1
+  }
+}
