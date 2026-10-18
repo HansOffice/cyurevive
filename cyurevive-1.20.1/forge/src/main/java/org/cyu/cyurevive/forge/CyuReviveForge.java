@@ -69,12 +69,14 @@ public class CyuReviveForge {
         game.addListener((ServerStoppingEvent event) -> PetService.onStop(event.getServer()));
         game.addListener((ServerStartedEvent event) -> CyuRevive.onServerStarted());
         game.addListener((PlayerInteractEvent.RightClickBlock event) -> {
+            if (event.getLevel().isClientSide()) return;
             if (PetService.onUseBlock(event.getEntity(), event.getLevel(), event.getPos(), event.getHand())) {
                 event.setCanceled(true);
                 event.setCancellationResult(InteractionResult.SUCCESS);
             }
         });
         game.addListener((PlayerInteractEvent.EntityInteract event) -> {
+            if (event.getLevel().isClientSide()) return;
             if (PetService.onPetInteract(event.getEntity(), event.getTarget(), event.getHand())) {
                 event.setCanceled(true);
                 event.setCancellationResult(InteractionResult.SUCCESS);

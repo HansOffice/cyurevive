@@ -8,7 +8,10 @@ base {
 }
 
 neoForge {
-    version = project.neoforge_version
+    enable {
+        version = project.neoforge_version
+        disableRecompilation = true
+    }
 
     runs {
         client {
@@ -52,6 +55,7 @@ def replaceProperties = [
         minecraft_version      : minecraft_version,
         minecraft_version_range: minecraft_version_range,
         neoforge_version       : neoforge_version,
+        neoforge_version_range : neoforge_version_range,
         mod_id                 : mod_id,
         mod_name               : mod_name,
         mod_license            : mod_license,

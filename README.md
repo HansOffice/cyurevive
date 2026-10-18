@@ -5,9 +5,9 @@
 ## 下载
 
 前往 [Releases](https://github.com/HansOffice/cyurevive/releases) 页面下载对应版本与加载器的构建：
-- **1.20.1**（Java 17）：`cyurevive-1.20.1-fabric-1.0.jar` / `cyurevive-1.20.1-forge-1.0.jar`
-- **1.21.1**（Java 21）：`cyurevive-1.21.1-fabric-1.0.jar` / `cyurevive-1.21.1-neoforge-1.0.jar`
-- **26.2**（Java 25）：`cyurevive-26.2-fabric-1.0.jar` / `cyurevive-26.2-neoforge-1.0.jar`
+- **1.20.1**（Java 17）：`cyurevive-1.20.1-fabric-1.0.1.jar` / `cyurevive-1.20.1-forge-1.0.1.jar`
+- **1.21.1**（Java 21）：`cyurevive-1.21.1-fabric-1.0.1.jar` / `cyurevive-1.21.1-neoforge-1.0.1.jar`
+- **26.2**（Java 25）：`cyurevive-26.2-fabric-1.0.1.jar` / `cyurevive-26.2-neoforge-1.0.1.jar`
 
 Fabric 端需安装对应版本的 Fabric API；Forge 与 NeoForge 端无需任何前置模组
 

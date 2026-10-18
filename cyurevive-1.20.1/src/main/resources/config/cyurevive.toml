@@ -7,7 +7,7 @@
 # 手持认家牌潜行右键空气：取消选择；普通喂食和骑乘沿用原版操作
 # 输入 /cyurevive 查看指令帮助；改完本文件可用 /cyurevive reload 热重载
 # 配置版本，跟随模组版本进位，请勿手动修改
-config-version = 100
+config-version = 101
 
 # 配置布局协议版本，结构调整时自增，请勿手动修改
 config-layout = 5

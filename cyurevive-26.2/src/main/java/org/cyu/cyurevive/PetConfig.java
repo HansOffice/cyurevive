@@ -23,7 +23,7 @@ import java.util.Locale;
 import java.util.Set;
 
 public class PetConfig {
-    public static final int CURRENT_CONFIG_VERSION = 100;
+    public static final int CURRENT_CONFIG_VERSION = 101;
     public static final int CURRENT_CONFIG_LAYOUT = 5;
     private static final Set<String> VERSION_KEYS = Set.of("config-version", "config-layout");
 
